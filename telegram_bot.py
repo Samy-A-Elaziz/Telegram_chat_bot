@@ -2,25 +2,23 @@ from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN: Final = "6649112697:AAF_MMhYxFS95v6sbZrtpFmeXydySROlsHY"
-BOT_USERNAME: Final = "@Resala_Training_Center_bot"
+TOKEN: Final = ""
+BOT_USERNAME: Final = ""
 
 #commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("hello in RTC.\nthe bot is under preparing")
+    await update.message.reply_text("")
 
 async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("we are a nonprofit organization wish to spread knowledge all over EGYPT with free courses we pretend")
-
+    await update.message.reply_text("")
 #responses
 def handle_response(text: str) -> str:
     processed: str = text.lower()
 
-    if 'hello' in processed:
-        return 'Hi'
+    if "" in processed:
+        return ""
     else:
-        return "you can contact us on facebook page to know what you want\nhttps://www.facebook.com/RTCAlex"
-
+        return ""
     return "invalid"
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
