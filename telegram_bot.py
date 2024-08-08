@@ -7,9 +7,18 @@ BOT_USERNAME: Final = ""
 
 #commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    #await update.message.reply_photo(open(url, 'r'))
+    #await update.message.reply_photo('')
+    print(f"user name: {update.message.from_user.full_name}, user_id:{update.message.chat.id}, in_{update.message.chat.type}, asked about:start, at " + now.strftime("%y-%m-%d %H:%M:%S"))
+    with open("file_name.txt", "a") as file: # to save something in file
+        file.write('') # something
     await update.message.reply_text("")
 
 async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    with open("file_name.txt", "a") as file: # to save something in file
+        file.write('') # something
+    with open("premium.txt", 'r') as file_n: # to read something in file
+        if update.message.chat.id in file_n: # something you read
     await update.message.reply_text("")
 #responses
 def handle_response(text: str) -> str:
